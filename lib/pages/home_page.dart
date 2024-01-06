@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../components/pincipal_cards.dart';
 import '../reusable_widgets/card.dart';
 
 class HomePage extends StatelessWidget {
@@ -88,7 +89,7 @@ class HomePage extends StatelessWidget {
                               '76.0',
                               style: TextStyle(
                                 color: Colors.amber,
-                                fontSize: 2,
+                                fontSize: 23,
                               ),
                             )
                           ],
@@ -125,6 +126,19 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.only(left: 25),
+              child: Text(
+                'Today´s Goals',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                textAlign: TextAlign.start,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            PincipalCards(),
           ],
         ),
       ),
