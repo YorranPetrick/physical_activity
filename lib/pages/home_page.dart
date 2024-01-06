@@ -112,14 +112,15 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   HydrationCalorieCard(
-                    textOfInformation: 'Liters Water',
-                    quantity: '4.5',
-                    imagePath: 'lib/assets/images/water-drop.png',
-                  ),
+                      textOfInformation: 'Liters Water',
+                      quantity: '4.5',
+                      imagePath: 'lib/assets/images/water-drop.png',
+                      color: Colors.blue),
                   HydrationCalorieCard(
                     textOfInformation: 'Calories',
                     quantity: '2.3K',
                     imagePath: 'lib/assets/images/calories.png',
+                    color: Colors.amber,
                   ),
                 ],
               ),

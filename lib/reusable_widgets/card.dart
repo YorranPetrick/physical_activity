@@ -4,10 +4,12 @@ class HydrationCalorieCard extends StatelessWidget {
   final String textOfInformation;
   final String quantity;
   final String imagePath;
+  final Color color;
   const HydrationCalorieCard(
       {required this.textOfInformation,
       required this.quantity,
       required this.imagePath,
+      required this.color,
       Key? key})
       : super(key: key);
 
@@ -25,11 +27,11 @@ class HydrationCalorieCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
-            padding: EdgeInsets.all(4),
+            padding: EdgeInsets.all(5),
             height: 50,
             width: 50,
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: color,
               borderRadius: BorderRadius.circular(100),
             ),
             child: Image.asset(imagePath, fit: BoxFit.cover),
@@ -37,7 +39,13 @@ class HydrationCalorieCard extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(quantity),
+              Text(
+                quantity,
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
               Text(textOfInformation),
             ],
           )
