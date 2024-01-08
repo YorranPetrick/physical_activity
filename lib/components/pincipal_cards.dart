@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../reusable_widgets/goal_cards.dart';
+
 class PincipalCards extends StatelessWidget {
   const PincipalCards({Key? key}) : super(key: key);
 
@@ -8,25 +10,25 @@ class PincipalCards extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Container(
-          height: 230,
-          width: 180,
-          decoration: BoxDecoration(
-            color: Colors.blue,
-            borderRadius: BorderRadius.circular(30),
-          ),
+        GaolCards(
+          cardHeight: 230,
+          cardWidth: 180,
+          cardColor: Colors.blue,
+          heightCardImage: 130,
+          imagePath: 'lib/assets/images/Nike-air-force-azul-vermelho.png',
+          cardText: ['Running', '30', ' Mins'],
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          mainAxisSize: MainAxisSize.max,
           children: [
-            Container(
-              height: 120,
-              width: 150,
-              decoration: BoxDecoration(
-                color: Colors.amber,
-                borderRadius: BorderRadius.circular(30),
-              ),
+            GaolCards(
+              cardHeight: 150,
+              cardWidth: 150,
+              cardColor: Colors.amberAccent,
+              cardText: ['Cyclling', '40', ' Mins'],
+            ),
+            SizedBox(
+              height: 20,
             ),
             Container(
               height: 50,
@@ -35,9 +37,9 @@ class PincipalCards extends StatelessWidget {
                 color: Colors.cyan,
                 borderRadius: BorderRadius.circular(30),
               ),
-            )
+            ),
           ],
-        )
+        ),
       ],
     );
   }
