@@ -31,11 +31,20 @@ class PincipalCards extends StatelessWidget {
               height: 20,
             ),
             Container(
+              padding: EdgeInsets.only(top: 12.5),
               height: 50,
               width: 150,
               decoration: BoxDecoration(
-                color: Colors.cyan,
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(30),
+                border: Border.all(),
+              ),
+              child: Expanded(
+                child: Text(
+                  'Sell All',
+                  style: TextStyle(fontSize: 18),
+                  textAlign: TextAlign.center,
+                ),
               ),
             ),
           ],
